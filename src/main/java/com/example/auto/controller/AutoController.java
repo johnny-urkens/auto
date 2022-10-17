@@ -20,9 +20,9 @@ public class AutoController {
     @PostConstruct
     public void fillDB(){
         if(autoRepository.count()==0){
-            autoRepository.save(new Auto("1abc111", "opel","rood"));
-            autoRepository.save(new Auto("2abc222", "VW","blauw"));
-            autoRepository.save(new Auto("3abc333", "bmw","zwart"));
+            autoRepository.save(new Auto("1abc111", "opel","rood",5));
+            autoRepository.save(new Auto("2abc222", "VW","blauw",4));
+            autoRepository.save(new Auto("3abc333", "bmw","zwart",5));
         }
         System.out.println(autoRepository.findAutoByNrplaat("1abc111").getMerk());
         System.out.println(autoRepository.findAutoByNrplaat("2abc222").getMerk());

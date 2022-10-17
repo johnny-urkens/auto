@@ -16,16 +16,19 @@ public class Auto {
     private String merk;
 
     private  String kleur;
+    private int aantalDeuren;
 
     public Auto(){
 
     }
 
 
-    public Auto(String nrplaat, String merk, String kleur){
+    public Auto(String nrplaat, String merk, String kleur,int aantalDeuren){
         setNrplaat(nrplaat);
         setMerk(merk);
         setKleur(kleur);
+        setAantalDeuren(aantalDeuren);
+
     }
     public  int getId(){return id;}
     public void setId(int id) {this.id = id;}
@@ -51,4 +54,11 @@ public class Auto {
         this.kleur = kleur;
     }
 
+    public int getAantalDeuren() {
+        return aantalDeuren;
+    }
+
+    public void setAantalDeuren(int aantalDeuren) {
+        this.aantalDeuren = aantalDeuren;
+    }
 }
